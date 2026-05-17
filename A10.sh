@@ -9,8 +9,11 @@ curl -s -L "$ZIP_URL" -o "$BASE/afk.zip"
 unzip -q -o "$BASE/afk.zip" -d "$BASE"
 
 su -c "
-cp -r \"$BASE/files\" \"/storage/emulated/0/Android/data/dkapp.pol.seiyw/\" 2>/dev/null
-cp -r \"$BASE/files\" \"/storage/emulated/0/Android/data/dkapp.pol.seiyx/\" 2>/dev/null
+mkdir -p "/storage/emulated/0/Android/data/dkapp.pol.seiyw/files"
+mkdir -p "/storage/emulated/0/Android/data/dkapp.pol.seiyx/files"
+
+cp -r "$BASE/files/"* "/storage/emulated/0/Android/data/dkapp.pol.seiyw/files/"
+cp -r "$BASE/files/"* "/storage/emulated/0/Android/data/dkapp.pol.seiyx/files/"
 
 pm install -r \"$BASE/RotationControl.apk\" > /dev/null 2>&1
 pm install -r \"$BASE/1111fixlogin.apk\" > /dev/null 2>&1
