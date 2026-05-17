@@ -2,7 +2,6 @@
 
 BASE="$(cd "$(dirname "$0")" && pwd)"
 ZIP_URL="https://github.com/vxy26/gamesdump/releases/download/film/a10.zip"
-DEST_DIR="/data/local/tmp"
 
 curl -s -L "$ZIP_URL" -o "$BASE/afk.zip"
 
@@ -37,5 +36,9 @@ pm uninstall --user 0 com.android.yzbrowser
 pm uninstall --user 0 com.owlproxy.overseas
 pm uninstall --user 0 com.google.android.gms.setup
 pm uninstall --user 0 com.android.chrome
+pm uninstall --user 0 com.google.android.apps.photos
+pm uninstall --user 0 com.android.expansiontools
+pm uninstall --user 0 com.android.appstores
+pm uninstall --user 0 com.android.pifix
 pm uninstall com.termoneplus
 "
